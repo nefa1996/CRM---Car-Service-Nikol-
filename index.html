@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>be1.ru</title>
+</head>
+<body>
+<p>&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&nbsp; &lt;meta charset=&quot;utf-8&quot; /&gt;<br />
+&nbsp; &lt;title&gt;Главная страница CRM&lt;/title&gt;<br />
+&nbsp; &lt;style&gt;<br />
+&nbsp; &nbsp; iframe {<br />
+&nbsp; &nbsp; &nbsp; width: 100%;<br />
+&nbsp; &nbsp; &nbsp; height: 800px;<br />
+&nbsp; &nbsp; &nbsp; border: 1px solid #ccc;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; button {<br />
+&nbsp; &nbsp; &nbsp; margin: 5px;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &lt;/style&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&nbsp; &lt;h1&gt;Главная страница CRM&lt;/h1&gt;<br />
+&nbsp; &lt;button onclick=&quot;loadPage(&#39;AppointmentForm&#39;)&quot;&gt;Запись на ремонт&lt;/button&gt;<br />
+&nbsp; &lt;button onclick=&quot;loadPage(&#39;ClientForm&#39;)&quot;&gt;Добавить клиента&lt;/button&gt;<br />
+&nbsp; &lt;button onclick=&quot;loadPage(&#39;OrderForm&#39;)&quot;&gt;Создать заказ-наряд&lt;/button&gt;<br />
+&nbsp; &lt;button onclick=&quot;loadPage(&#39;AddProductForm&#39;)&quot;&gt;Добавить товар&lt;/button&gt;<br />
+&nbsp;&nbsp;<br />
+&nbsp; &lt;iframe id=&quot;crmFrame&quot; src=&quot;&quot;&gt;&lt;/iframe&gt;<br />
+&nbsp;&nbsp;<br />
+&nbsp; &lt;script&gt;<br />
+&nbsp; &nbsp; // Вставь сюда URL своего развернутого веб-приложения<br />
+&nbsp; &nbsp; const baseUrl = &#39;https://script.google.com/macros/s/ВАШ_ID_ПРОЕКТА/exec&#39;;<br />
+&nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; function loadPage(page) {<br />
+&nbsp; &nbsp; &nbsp; document.getElementById(&#39;crmFrame&#39;).src = baseUrl + &#39;?page=&#39; + page;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &lt;/script&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;<br />
+&nbsp;</p>
+</body>
+</html>
